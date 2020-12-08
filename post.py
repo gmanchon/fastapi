@@ -22,11 +22,13 @@ class Observation(BaseModel):
 
 
 @app.post("/pred")
-def create_city(obs: Observation):
+def make_pred(obs: Observation):
     return {"pred": obs}
 
 
 # # test
+#
+# # uvicorn post:app
 #
 # observation = dict(content=dict(
 #         key="value"
